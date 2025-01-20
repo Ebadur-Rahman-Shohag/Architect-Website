@@ -325,14 +325,28 @@ footer p {
   header nav {
     max-width: 1024px;
   }
+  .banner-container {
+    max-width: 1024px;
+  }
   main {
     max-width: 1024px;
   }
   footer {
     max-width: 1024px;
   }
+
   .facts-card-container {
     column-gap: 60px;
+  }
+  .facts-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 180px;
+    height: 180px;
+    border: 1px solid #ff900e;
+    border-radius: 8px;
   }
   .sponsor-image-container {
     column-gap: 70px;
