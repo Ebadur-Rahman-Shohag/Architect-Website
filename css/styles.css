@@ -320,3 +320,21 @@ footer p {
     margin: 130px auto;
   }
 }
+
+@media screen and (min-width: 992px) and (max-width: 1440px) {
+  header nav {
+    max-width: 1024px;
+  }
+  main {
+    max-width: 1024px;
+  }
+  footer {
+    max-width: 1024px;
+  }
+  .facts-card-container {
+    column-gap: 60px;
+  }
+  .sponsor-image-container {
+    column-gap: 70px;
+  }
+}
