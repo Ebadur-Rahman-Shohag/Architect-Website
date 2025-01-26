@@ -33,13 +33,14 @@ header {
 }
 
 header nav {
+  width: 100%;
   max-width: 1440px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 0.125rem;
 }
 
 .nav-logo {
@@ -50,6 +51,7 @@ header nav {
 header nav ul {
   display: flex;
   gap: 1rem;
+  margin-top: 1rem;
 }
 
 header > nav > ul > li {
@@ -65,18 +67,19 @@ header > nav > ul li a {
 
 /* banner css */
 .banner-container {
+  width: 100%;
   max-width: 1440px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 10px;
+  margin: 0.125rem auto 0 auto;
 }
 
 .banner-content {
-  max-width: 862px;
-  margin-top: 50px;
+  max-width: 300px;
+  margin-top: 3.1rem;
 }
 
 .banner-title {
@@ -87,7 +90,8 @@ header > nav > ul li a {
 .banner-description {
   font-weight: 400;
   font-size: 1rem;
-  margin-top: 8px;
+  margin-top: 0.8rem;
+  line-height: 1.5rem;
 }
 
 .banner-image {
@@ -101,24 +105,27 @@ header > nav > ul li a {
   color: white;
   width: 180px;
   height: 64px;
-  margin-top: 20px;
-  margin-bottom: 50px;
+  margin-top: 1.25rem;
+  margin-bottom: 3.1rem;
   border: none;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 /* main section css */
 main {
+  width: 100%;
   max-width: 1440px;
   margin: 0 auto;
 }
 
 /* features section */
 .features-container {
-  margin-top: 100px;
+  width: 100%;
+  margin-top: 6.25rem;
   display: flex;
   flex-direction: column;
+  gap: 1rem;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -134,6 +141,10 @@ main {
 }
 
 .features-right-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-top: 20px;
 }
 
@@ -143,15 +154,18 @@ main {
 }
 
 .feature-description {
-  max-width: 537px;
-  margin-top: 10px;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 0.625rem;
   font-weight: 400;
   font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: center;
 }
 
-/* facts css */
+/* facts section css */
 .facts-container {
-  margin-top: 30px;
+  margin-top: 1.88rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -165,17 +179,18 @@ main {
 }
 
 .facts-description {
-  max-width: 542px;
+  max-width: 300px;
   font-weight: 400;
   font-size: 1rem;
-  margin-top: 8px;
+  line-height: 1.5rem;
+  margin-top: 0.5rem;
 }
 
 .facts-card-container {
-  margin-top: 30px;
+  margin-top: 1.88rem;
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 15px;
+  row-gap: 1rem;
 }
 
 .facts-card {
@@ -189,9 +204,11 @@ main {
   border-radius: 8px;
 }
 
-/* sponsors section */
+/* sponsors section css*/
 .sponsor-container {
-  margin-top: 50px;
+  width: 100%;
+  max-width: 1440px;
+  margin-top: 3.1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -206,15 +223,16 @@ main {
 
 .sponsor-description {
   margin-top: 8px;
-  max-width: 542px;
+  max-width: 300px;
   font-weight: 400;
   font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .sponsor-image-container {
   margin-top: 35px;
   display: grid;
-  row-gap: 15px;
+  row-gap: 2rem;
   grid-template-columns: 1fr;
   justify-items: center;
 }
@@ -242,113 +260,177 @@ footer p {
   font-size: 1.1rem;
 }
 
-/* responsive css code */
-@media screen and (min-width: 992px) {
-  header nav {
-    flex-direction: row;
-    justify-content: space-between;
-  }
+@media screen and (min-width: 768px) {
   header nav ul {
-    gap: 1.8rem;
-    flex-wrap: wrap;
+    gap: 1.5rem;
   }
-  .banner-container {
-    margin: 0 auto;
+  .banner-content {
+    max-width: 500px;
   }
   .banner-title {
-    font-size: 4rem;
+    font-size: 2.5rem;
   }
   .banner-description {
-    margin-top: 15px;
+    margin-top: 0.625rem;
   }
-  /* feature sction */
+
+  /* features section */
   .features-container {
-    flex-direction: row;
+    margin-top: 5rem;
   }
   .features-left-content {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin-right: 73px;
+    gap: 1.5rem;
   }
-  .features-right-content {
-    text-align: left;
-    margin-top: 0;
-  }
+
   .feature-title {
-    font-size: 4rem;
+    font-size: 2.5rem;
   }
   .feature-description {
-    margin-top: 24px;
-    margin-bottom: 32px;
+    max-width: 500px;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
   }
 
   /* facts section */
   .facts-container {
-    justify-content: start;
-    align-items: start;
-    text-align: left;
-    margin-top: 130px;
+    margin-top: 3rem;
   }
-
   .facts-title {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
   }
-
+  .facts-description {
+    max-width: 500px;
+    margin-top: 1.25rem;
+  }
   .facts-card-container {
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 100px;
-    margin: 100px 20px 0 20px;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+    margin: 50px 20px 0 20px;
   }
 
-  /* sponsor-section */
+  /* sponsor css */
   .sponsor-container {
-    margin-top: 180px;
+    margin-top: 3rem;
   }
   .sponsor-title {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
   }
   .sponsor-description {
-    margin-top: 24px;
+    margin-top: 20px;
+    max-width: 500px;
   }
   .sponsor-image-container {
-    grid-template-columns: repeat(5, 1fr);
-    justify-items: start;
-    column-gap: 155px;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 100px;
+  }
+  .sponsor-image {
+    height: 50px;
+    width: 150px;
+    filter: grayscale(100%);
   }
 
-  /* footer section */
   footer {
-    margin: 130px auto;
+    margin: 100px auto;
   }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1440px) {
+@media screen and (min-width: 1200px) {
   header nav {
-    max-width: 1024px;
-  }
-  .banner-container {
-    max-width: 1024px;
-  }
-  main {
-    max-width: 1024px;
-  }
-  footer {
-    max-width: 1024px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  .facts-card-container {
-    column-gap: 60px;
+  header nav ul {
+    gap: 3rem;
   }
-  .facts-card {
-    display: flex;
-    justify-content: center;
+  .banner-content {
+    max-width: 868px;
+  }
+  .banner-title {
+    font-size: 3rem;
+  }
+  .banner-description {
+    margin-top: 0.625rem;
+  }
+
+  /* features section */
+  .features-container {
+    margin-top: 5.3rem;
+    flex-direction: row;
+    justify-content: start;
     align-items: center;
-    text-align: center;
-    width: 180px;
-    height: 180px;
-    border: 1px solid #ff900e;
-    border-radius: 8px;
+    text-align: left;
+  }
+  .features-left-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .features-right-content {
+    justify-content: start;
+    align-items: start;
+    margin-left: 4.75rem;
+    text-align: left;
+  }
+
+  .feature-title {
+    font-size: 3rem;
+    text-align: left;
+  }
+  .feature-description {
+    max-width: 600px;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    text-align: left;
+  }
+
+  /* facts section */
+  .facts-container {
+    margin-top: 8.1rem;
+    justify-content: start;
+    align-items: start;
+    text-align: left;
+  }
+  .facts-title {
+    font-size: 3rem;
+  }
+  .facts-description {
+    max-width: 600px;
+    margin-top: 1.25rem;
+  }
+  .facts-card-container {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 7.75rem;
+    margin: 6.25rem 1.25rem 0 1.25rem;
+  }
+
+  /* sponsor css */
+  .sponsor-container {
+    margin-top: 11.25rem;
+  }
+  .sponsor-title {
+    font-size: 3rem;
+  }
+  .sponsor-description {
+    margin-top: 1.25rem;
+    max-width: 600px;
   }
   .sponsor-image-container {
-    column-gap: 70px;
+    margin-top: 8.1rem;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 9.68rem;
+  }
+  .sponsor-image {
+    border: dashed 1px rgb(169, 162, 162);
+    height: 50px;
+    width: 166px;
+    filter: grayscale(100%);
+  }
+
+  footer {
+    margin: 8.1rem auto 13.3rem auto;
   }
 }
